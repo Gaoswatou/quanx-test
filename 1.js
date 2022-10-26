@@ -32,7 +32,7 @@ let body = $response.body;
 let url = $request.url;
 let obj = JSON.parse(body);
 
-cosnt agentConfigUrl='https://ssb.service.888iq.cn/ssb-api/api/agent/getUpgradeConfig'
+const agentConfigUrl='https://ssb.service.888iq.cn/ssb-api/api/agent/getUpgradeConfig'
 
 
 if(url.includes(agentConfigUrl)){
