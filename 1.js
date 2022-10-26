@@ -12,6 +12,12 @@ let obj = JSON.parse(body);
 cosnt agentConfigUrl='https://ssb.service.888iq.cn/ssb-api/api/agent/getUpgradeConfig'
 
 if(url.includes(agentConfigUrl)){
-  console.log(obj)
-  $done()
+  let data=obj.data
+  data.forEach(el=>{
+    if(el.type===2){
+      el.price=6688 
+    }
+  })
+  body=JSON.stringify(obj)
 }
+$done({body})
