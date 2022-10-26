@@ -39,6 +39,7 @@ if(url.includes(agentConfigUrl)){
   console.log(body)
   obj.data.forEach(el=>{
     if(el.type===2){
+      el.description="没想到吧，被我改掉了"
       el.price=6688 
     }
   })
